@@ -1,3 +1,4 @@
+import Home from './pages/circle-user.svg';
 import about from './pages/house.svg';
 import skills from './pages/skills.svg';
 import achievements from './pages/trophy.svg';
@@ -12,6 +13,7 @@ import react from './skills/react.svg';
 import redux from './skills/redux.svg';
 import tailwind from './skills/tailwind.svg';
 import API from './skills/restfulApi.png';
+import framer from './skills/framer.png';
 // start services
 import frontEnd from './services/frontEnd.png';
 // start Projects Thumbnail
@@ -24,7 +26,10 @@ import hicham from './profile/hicham.png';
 // items
 import menu from './menu.svg';
 import close from './x.svg';
+// Cv
+import myCv from './Cv/cv.pdf';
 const images = {
+  Home,
   about,
   skills,
   achievements,
@@ -39,6 +44,7 @@ const images = {
   redux,
   tailwind,
   API,
+  framer,
   // services
   frontEnd,
   // projects thumbnail
@@ -50,6 +56,7 @@ const images = {
   hicham,
   // items
   menu,
-  close
+  close,
 };
+export const Cv = myCv;
 export default images;

@@ -3,36 +3,42 @@ import images from '../assets';
 export const pages = [
   {
     id: '1',
+    title: 'Home',
+    link: '/',
+    icon: images.Home,
+  },
+  {
+    id: '2',
     title: 'About',
     link: 'about',
     icon: images.about,
   },
   {
-    id: '2',
+    id: '3',
     title: 'Skills',
     link: 'skills',
     icon: images.skills,
   },
   {
-    id: '3',
+    id: '4',
     title: 'trophy',
     link: 'trophy',
     icon: images.achievements,
   },
   {
-    id: '4',
+    id: '5',
     title: 'Services',
     link: 'services',
     icon: images.services,
   },
   {
-    id: '5',
+    id: '6',
     title: 'Projects',
     link: 'projects',
     icon: images.projects,
   },
   {
-    id: '6',
+    id: '7',
     title: 'Contact',
     link: 'contact-me',
     icon: images.contact,
@@ -42,6 +48,7 @@ export const home = {
   job: 'Front-End',
   resumeLink: '',
   img: images.hicham,
+  mainSkills: [images.react, images.js, images.redux, images.tailwind],
 };
 export const services = [
   {

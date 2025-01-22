@@ -10,3 +10,60 @@
   --font-grotesk: 'Space Grotesk', sans-serif;
   color-scheme: white;
 }
+/* Style for the text */
+.typing {
+  font-size: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 0; /* Initially hide the text */
+  animation: typing 2s steps(19) 1s forwards, restartAnimation 4s infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Text restart animation (loop after finishing) */
+@keyframes restartAnimation {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Add cursor (using the ::after pseudo-element) */
+.typing::after {
+  content: '|'; /* Cursor symbol */
+  position: absolute;
+  right: -4px;
+  top: 0;
+  color: #ff006a;
+  animation: cursorBlink 0.4s step-end infinite alternate;
+}
+
+/* Cursor blink animation */
+@keyframes cursorBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

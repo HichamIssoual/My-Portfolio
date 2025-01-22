@@ -22,7 +22,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`md:hidden flex flex-col justify-center items-start fixed w-fit top-0 transition-all h-screen duration-200 ${
+        className={`z-50 md:hidden flex flex-col justify-center items-start fixed max-[430px]:w-fit w-[200px] top-0 transition-all h-screen duration-200 ${
           menu == true ? 'left-0' : '-left-[600px]'
         } bg-color-7 p-2`}
       >
@@ -40,7 +40,7 @@ const Header = () => {
         ))}
       </div>
       <div className="py-4 fixed md:top-1/2 md:left-5 md:-translate-y-1/2">
-        <div className="max-md:hidden py-4 flex flex-col gap-3 rounded-3xl backdrop-blur-md w-fit px-2 mx-auto">
+        <div className="max-md:hidden py-4 flex flex-col gap-3 rounded-3xl w-fit px-2 mx-auto">
           {pages.map((item) => {
             const isActive = pathname === `/${item.link}`;
             const isHovered = show === item.id;
