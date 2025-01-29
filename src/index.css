@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  --font-sora: 'Sora', sans-serif;
-  --font-code: 'Source Code Pro', monospace;
-  --font-grotesk: 'Space Grotesk', sans-serif;
-  color-scheme: white;
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  color-scheme: dark;
 }
 /* Style for the text */
 .typing {
@@ -47,7 +47,7 @@
 
 /* Add cursor (using the ::after pseudo-element) */
 .typing::after {
-  content: '|'; /* Cursor symbol */
+  content: "|"; /* Cursor symbol */
   position: absolute;
   right: -4px;
   top: 0;
@@ -66,4 +66,38 @@
   100% {
     opacity: 1;
   }
+}
+/*scroll bar*/
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background color of the track */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: #0c60c0; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #084285; /* Darker color on hover */
+}
+
+/* Remove default arrows (triangle buttons) */
+::-webkit-scrollbar-button {
+  display: none; /* Hides the up/down or left/right arrows */
+}
+
+/*selection*/
+*::selection {
+  background-color: #00b4e0;
+  color: black;
 }

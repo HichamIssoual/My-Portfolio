@@ -1,37 +1,42 @@
-import { Link, useLocation } from 'react-router';
-import { pages } from '../constants';
-import { useState } from 'react';
-import images from '../assets';
+import { Link, useLocation } from "react-router";
+import { home, pages } from "../constants";
+import { useState } from "react";
+import images from "../assets";
+
 const Header = () => {
   const { pathname } = useLocation();
   const [show, setShow] = useState(null);
   const [menu, setMenu] = useState(false);
+
+  const toggleMenu = () => setMenu((prev) => !prev);
+
   return (
     <header className="text-gray-900">
+      {/* Mobile Menu Toggle */}
       <div className="max-md:container max-md:flex max-md:justify-end max-md:items-center max-md:mt-2">
-        <div className="md:hidden fixed top-3">
+        <div className="md:hidden fixed z-10 right-0 top-3">
           <img
-            src={menu == true ? images.close : images.menu}
+            src={menu ? images.close : images.menu}
             alt="menu"
             width={35}
-            className="p-1 bg-blue-600 rounded-lg cursor-pointer transition duration-200"
-            onClick={() => {
-              setMenu(!menu);
-            }}
+            className="p-1 bg-cyan-400 rounded-lg cursor-pointer transition duration-200"
+            onClick={toggleMenu}
           />
         </div>
       </div>
+
+      {/* Mobile Menu */}
       <div
-        className={`z-50 md:hidden flex flex-col justify-center items-start fixed max-[430px]:w-fit w-[200px] top-0 transition-all h-screen duration-200 ${
-          menu == true ? 'left-0' : '-left-[600px]'
-        } bg-color-7 p-2`}
+        className={`max-md:h-screen md:hidden z-10 flex flex-col justify-start items-start fixed max-[430px]:w-fit w-[200px] top-0 transition-all h-screen duration-200 ${
+          menu ? "left-0" : "-left-[600px]"
+        } bg-gray-800/75 backdrop-blur-md p-2`}
       >
         {pages.map((page) => (
           <Link
             key={page.id}
             to={page.link}
-            className={`flex items-center gap-2 text-sm p-2 transition-all duration-200 hover:bg-blue-600 hover:text-white w-full rounded-xl mt-2 ${
-              pathname == `/${page.link}` && 'bg-blue-600 text-white'
+            className={`flex text-cyan-400 font-bold items-center gap-2 text-sm p-2 transition-all duration-200 hover:bg-cyan-400 hover:text-white w-full rounded-xl mt-2 ${
+              pathname === `/${page.link}` ? "bg-cyan-400 text-white" : ""
             }`}
           >
             <img src={page.icon} alt={page.link} width={25} />
@@ -39,40 +44,49 @@ const Header = () => {
           </Link>
         ))}
       </div>
-      <div className="py-4 fixed md:top-1/2 md:left-5 md:-translate-y-1/2">
-        <div className="max-md:hidden py-4 flex flex-col gap-3 rounded-3xl w-fit px-2 mx-auto">
-          {pages.map((item) => {
-            const isActive = pathname === `/${item.link}`;
-            const isHovered = show === item.id;
 
-            const containerClass = `flex items-center relative rounded-t-full rounded-b-full transition-all duration-400 ${
-              isHovered || isActive ? 'w-[135px] bg-blue-600' : 'w-[50px]'
-            }`;
-
-            const iconClass = `w-[50px] h-[50px] flex justify-center items-center rounded-full transition duration-300 ${
-              isHovered || isActive ? 'bg-blue-600' : 'bg-color-7'
-            }`;
-
-            const titleClass = `absolute left-15 transition duration-100 text-white ${
-              isHovered || isActive ? 'opacity-100' : 'opacity-0'
-            }`;
-
-            return (
-              <Link
-                key={item.id}
-                to={item.link}
-                className={containerClass}
-                onMouseEnter={() => setShow(item.id)}
-                onMouseLeave={() => setShow(null)}
-              >
-                <div className={iconClass}>
-                  <img src={item.icon} width={25} />
-                </div>
-                <span className={titleClass}>{item.title}</span>
-              </Link>
-            );
-          })}
+      {/* Sidebar Menu */}
+      <div className="sticky top-0 md:left-5 w-[180px] max-md:hidden py-4 flex flex-col gap-3 px-2 h-screen bg-color-secondary">
+        <div className="flex flex-col items-center w-full">
+          <div className="bg-color-primary p-2 rounded-3xl">
+            <img
+              src={home.img}
+              alt="hicham issoual"
+              className="rounded-3xl"
+              width={100}
+            />
+          </div>
+          <h6 className="h6 text-cyan-400 text-nowrap">💻 Hicham Issoual</h6>
+          <span className="text-gray-200 text-sm">Front-end Developer</span>
         </div>
+
+        {pages.map((item) => {
+          const isActive = pathname === `/${item.link}`;
+          const isHovered = show === item.id;
+
+          return (
+            <Link
+              key={item.id}
+              to={item.link}
+              className={`flex items-center relative transition-all text-white hover:border-r-4 border-cyan-400 p-2 rounded-md ${
+                isActive ? "bg-cyan-400" : isHovered ? "bg-slate-900/30" : ""
+              }`}
+              onMouseEnter={() => setShow(item.id)}
+              onMouseLeave={() => setShow(null)}
+            >
+              <div className="w-[30px] h-[30px] flex justify-center items-center rounded-full transition duration-300 text-cyan-400">
+                <img src={item.icon} alt={item.title} />
+              </div>
+              <span
+                className={`ml-5 ${
+                  isHovered && !isActive ? "text-cyan-400" : ""
+                }`}
+              >
+                {item.title}
+              </span>
+            </Link>
+          );
+        })}
       </div>
     </header>
   );
