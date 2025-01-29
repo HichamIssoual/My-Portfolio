@@ -53,7 +53,7 @@ function Home() {
         <motion.div whileTap={{ scale: 0.9 }}>
           <a
             href={Cv}
-            download="hicham-issoual.pdf"
+            download="hichamissoual.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 font-extrabold py-5 bg-gradient-to-r from-cyan-400 to-cyan-500 text-white rounded-lg shadow-lg transition-all duration-200 hover:from-cyan-500 hover:to-cyan-600 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 dark:focus:ring-cyan-500 dark:hover:from-cyan-400 dark:hover:to-cyan-500"
