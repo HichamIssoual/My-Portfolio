@@ -12,7 +12,7 @@ Welcome to my personal portfolio! 🎨🚀 This project showcases my skills, pro
 
 ## 📸 Preview
 
-![Portfolio Screenshot]("./src/assets/Screenshot_20250129_051129.png")
+![Portfolio Screenshot](./src/assets/Screenshot_20250129_051129.png)
 
 ## 📂 Folder Structure
 
