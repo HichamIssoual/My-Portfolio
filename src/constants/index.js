@@ -200,13 +200,6 @@ export const frontEnd_Skills = [
     yearsExp: "Less than a year experience",
     percent: 40,
   },
-  {
-    id: "8",
-    title: "RESTful APIs",
-    icon: images.API,
-    yearsExp: "Less than a year experience",
-    percent: 60,
-  },
 ];
 export const ToolsSkills = [
   {

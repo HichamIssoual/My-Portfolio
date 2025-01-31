@@ -11,7 +11,6 @@ import js from "./skills/JavaScript.png";
 import react from "./skills/react.svg";
 import redux from "./skills/redux.svg";
 import tailwind from "./skills/tailwind.svg";
-import API from "./skills/restfulApi.png";
 import framer from "./skills/framer.png";
 import github from "./skills/github.svg";
 import git from "./skills/git.svg";
@@ -66,7 +65,6 @@ const images = {
   react,
   redux,
   tailwind,
-  API,
   framer,
   // tools
   git,
