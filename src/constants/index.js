@@ -131,9 +131,9 @@ export const personalIntrest = [
   {
     id: "3",
     icon: images.english,
-    title: "Learning English",
+    title: "Learning French",
     description:
-      "Dedicated to improving my English language skills to enhance communication and professional opportunities.",
+      "Dedicated to improving my French language skills to enhance communication and professional opportunities.",
   },
   {
     id: "4",
@@ -141,13 +141,6 @@ export const personalIntrest = [
     title: "Reading Books",
     description:
       "Enjoy reading books on personal development, and fiction to expand my knowledge and creativity.",
-  },
-  {
-    id: "5",
-    icon: images.youtube,
-    title: "Content Creation",
-    description:
-      "Creating tech-related content on YouTube, sharing knowledge about programming, Linux, and productivity tools.",
   },
 ];
 export const frontEnd_Skills = [
