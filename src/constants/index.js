@@ -131,9 +131,9 @@ export const personalIntrest = [
   {
     id: "3",
     icon: images.english,
-    title: "Learning French",
+    title: "Learning English",
     description:
-      "Dedicated to improving my French language skills to enhance communication and professional opportunities.",
+      "Dedicated to improving my English language skills to enhance communication and professional opportunities.",
   },
   {
     id: "4",
