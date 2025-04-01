@@ -48,8 +48,8 @@ Welcome to my personal portfolio! 🎨🚀 This project showcases my skills, pro
 
 ## 📬 Contact Me
 
-- **Portfolio:** [yourwebsite.com](https://yourwebsite.com)
-- **Email:** your.email@example.com
+- **Portfolio:** [yourwebsite.com](https://hicham-issoual.vercel.app/)
+- **Email:** hichamissoual.one@gmail.com
 - **LinkedIn:** [linkedin.com/in/yourname](https://www.linkedin.com/in/hichamissoual/)
 - **GitHub:** [github.com/yourusername](https://github.com/HichamIssoual/)
 
